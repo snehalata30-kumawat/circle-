@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+             /* background-image: repeating-conic-gradient(from 135deg, red 0deg 90deg, green 90deg 180deg, blue 180deg 270deg, rgb(212, 231, 2) 270deg 360deg);   */
+
+            background-image: repeating-conic-gradient(red, green, blue, yellow, black 20%);
+            animation-name: anima;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes anima {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="main" onclick="myfunc()"></div>
+<script>
+    
+a=0
+const  myfunc=()=>{
+   data =document.querySelector(".main")
+if(!a){
+    data.style="animation-duration: 10s"
+        a=1
+    }
+    else {
+        data.style="animation-duration:unset"
+        a=0
+    }}
+
+</script>
+</body>
+
+
+</html>
